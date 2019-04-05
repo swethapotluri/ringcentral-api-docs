@@ -4,13 +4,13 @@ no_breadcrumb:true
 
 Welcome to the RingCentral Platform. RingCentral is the leading unified communications platform. From one system developers can integrate with, or build products around all the ways people communicate today: SMS, voice, fax, chat and meetings.
 
-In this Quick Start, we are going to help you connect two people in a live phone call using our RingOut API, which dials two phone numbers, and then connects the two people when they answer. Let's get started.
+In this Quick Start, we are going to help you access your call history using our call-log API, which reads the voice and messaging transaction history and returns essential information about the transaction. Let's get started.
 
 ## Create an App
 
 The first thing we need to do is create an app in the RingCentral Developer Portal. This can be done quickly by clicking the "Create Call Log App" button below. Just click the button, enter a name and description if you choose, and click the "Create" button. If you do not yet have a RingCentral account, you will be prompted to create one.
 
-<a target="_new" href="https://developer.ringcentral.com/new-app?name=SMS+Quick+Start+App&desc=A+simple+app+to+demo+sending+an+SMS+on+RingCentral&public=false&type=ServerOther&carriers=7710,7310,3420&permissions=SMS,ReadMessages&redirectUri=" class="btn btn-primary">Create Call Log App</a>
+<a target="_new" href="https://developer.ringcentral.com/new-app?name=Read+Call+Log+Quick+Start+App&desc=A+simple+app+to+demo+reading+the+call+history+on+RingCentral&public=false&type=ServerOther&carriers=7710,7310,3420&permissions=ReadCallLog&redirectUri=" class="btn btn-primary">Create Call Log App</a>
 <a class="btn-link btn-collapse" data-toggle="collapse" href="#create-app-instructions" role="button" aria-expanded="false" aria-controls="create-app-instructions">Show detailed instructions</a>
 
 <div class="collapse" id="create-app-instructions">
@@ -26,16 +26,13 @@ The first thing we need to do is create an app in the RingCentral Developer Port
   </li>
 <li>On the third page of the create app wizard, select the following permissions:
   <ul>
-    <li>SMS</li>
-    <li>Webhook Subscriptions</li>
+    <li>ReadCallLog</li>
   </ul>
   </li>
-<li>Leave "OAuth Redirect URI" blank for now. We will come back and edit that later.</li>
+<li>We are using Password Flow authentication, so leave "OAuth Redirect URI" blank.</li>
 </ol>
 </div>
 
 When you are done, you will be taken to the app's dashboard. Make note of the Client ID and Client Secret. We will be using those momentarily.
 
-### Try it out
-
-Click the "Try it out" button to read all users' presence status. If it works, try doing the same thing using one of our code samples.
+## Read your call log

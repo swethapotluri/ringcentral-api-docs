@@ -1,6 +1,6 @@
 no_breadcrumb:true
 
-# Webhook Notifications Node.js Quick Start
+# Webhook Notifications python Quick Start
 
 Welcome to the RingCentral Platform. RingCentral is the leading unified communications platform. From one system developers can integrate with, or build products around all the ways people communicate today: SMS, voice, fax, chat and meetings.
 
@@ -53,7 +53,7 @@ If the port 5000 is not available on your system, just choose another port numbe
 
 Copy the forwarding address e.g. https://171c1761.ngrok.io and append the path "/webhook" to the address then paste it into the DELIVERY_MODE_ADDRESS variable in the code below.
 
-
+Note: Running the demo code require Python v3.x!
 
 ### Create and Edit webhook-notification.py
 
@@ -86,9 +86,9 @@ try:
         }
     }
     res = platform.post("/subscription", params)
-    return res
+    print (res)
 except Exception as e:
-    return e
+    print (e)
 ```
 
 ### Create and Edit webhook-server.py
@@ -134,13 +134,13 @@ You are almost done. Now run your script.
 Open a terminal window and run the server code.
 
 ```bask
-$ python webhook-server.py
+$ python3 webhook-server.py
 ```
 
 Open another terminal window and run the app
 
 ```bask
-$ python webhook-notification.php
+$ python3 webhook-notification.py
 ```
 Now you can send an SMS message to the extension's phone number to see how you'll receive the notification.
 
